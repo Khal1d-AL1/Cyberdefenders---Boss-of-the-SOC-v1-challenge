@@ -67,10 +67,22 @@ Due to the high volume of requests to “imreallynotbatman.com” most likely 40
   
   ![splunk6](https://github.com/user-attachments/assets/952ff3af-2a47-4959-b800-e4ca1dec6705)
 
+ <br><br>
+ - by select the dest_ip field to know which IP address is targerted by the scanner.
+   
+   ![splunk7](https://github.com/user-attachments/assets/d1ce12e6-bf56-48b2-bbd6-0bf702ad33ef)
 
-  
+   There are two IP addresses: 192.168.250.70 and 192.168.250.40.
+   Obviously, 192.168.250.70 is the primary target, which is also the organization’s website.
 
-  
+ <br><br>
+ If we want to look at HTTP URI being scanned by this APT group, we can filter the status of http stream:
+
+### index="botsv1" sourcetype="stream:http" status=200 src_ip="40.80.148.42" dest_ip="192.168.250.70" | stats count by uri | sort - count
+![splunk8](https://github.com/user-attachments/assets/7045e307-b482-460a-847a-3699e096077e)
+
+At this point, we can conclude that the APT group employed Acunetix vulnerability scanner to perform reconnaissance activities against the Joomla website hosted on 192.168.250.70.
+
 
 
 
