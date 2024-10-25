@@ -11,9 +11,25 @@ Today is Alice's first day at the Wayne Enterprise Security Operations Center. L
 
 ### Step 1 - Reconnaissance
 
-Our organization’s website is imreallynotbatman.com.
+1. What is the likely IPv4 address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?
 
-Now, we will identify traffic related to the imreallynotbatman.com website. 
+   Our organization’s website is imreallynotbatman.com.
 
-What is the likely IPv4 address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?
+   Now, we will identify traffic related to the imreallynotbatman.com website.
+   by using following query.
+   -------------------------------------
+   index="botsv1" imreallynotbatman.com
+   -------------------------------------
+
+   ![splunk2](https://github.com/user-attachments/assets/a062c715-5d6c-413f-92ee-4602bfee5287)
+
+   There are 78,683 events relating to this website. Currently, not all of them are essential to us.
+   We can observe relevant streams as the following:
+
+   ![splunk1](https://github.com/user-attachments/assets/828bf146-0b10-4e6d-aafe-696dcd848645)
+
+
+
+
+
 
