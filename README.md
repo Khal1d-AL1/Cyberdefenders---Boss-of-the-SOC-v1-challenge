@@ -25,9 +25,7 @@ Today is Alice's first day at the Wayne Enterprise Security Operations Center. L
 
    ![splunk2](https://github.com/user-attachments/assets/a062c715-5d6c-413f-92ee-4602bfee5287)  
 
-<space>
-   <space>
-      
+<br><br> 
    - There are 78,683 events relating to this website. Currently, not all of them are essential to us.
      We can observe relevant streams as the following:
 
