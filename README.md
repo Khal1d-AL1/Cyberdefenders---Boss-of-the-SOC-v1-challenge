@@ -27,6 +27,8 @@ Today is Alice's first day at the Wayne Enterprise Security Operations Center. L
 
 
 
+
+
    - There are 78,683 events relating to this website. Currently, not all of them are essential to us.
      We can observe relevant streams as the following:
 
