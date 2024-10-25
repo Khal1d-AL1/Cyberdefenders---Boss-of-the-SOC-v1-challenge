@@ -23,10 +23,37 @@ Today is Alice's first day at the Wayne Enterprise Security Operations Center. L
 
    ![splunk2](https://github.com/user-attachments/assets/a062c715-5d6c-413f-92ee-4602bfee5287)
 
+
+
    There are 78,683 events relating to this website. Currently, not all of them are essential to us.
    We can observe relevant streams as the following:
 
    ![splunk1](https://github.com/user-attachments/assets/828bf146-0b10-4e6d-aafe-696dcd848645)
+
+
+sourcetype of stream:http is definitely interesting to us, now we concentrate on the HTTP traffic.
+
+using below query:
+
+-------------------------------------------------------------
+index="botsv1" sourcetype="stream:http" imreallynotbatman.com
+-------------------------------------------------------------
+
+![splunk3](https://github.com/user-attachments/assets/7dfec733-bf93-490a-a538-c2b9f56177eb)
+
+
+the output is too overwhelming to inspect those traffic manually.
+By adding | fields src_ip, to the  previous query, we can extract unique source ip address.
+
+-----------------------------------------------------------------------------
+index="botsv1" sourcetype="stream:http" imreallynotbatman.com | fields src_ip
+-----------------------------------------------------------------------------
+
+![splunk4](https://github.com/user-attachments/assets/91d19c81-12ae-4b6b-b654-6564194d7b9b)
+
+
+
+
 
 
 
