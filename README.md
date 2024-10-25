@@ -85,6 +85,9 @@ Due to the high volume of requests to “imreallynotbatman.com” most likely 40
 ### At this point, we can conclude that the APT group employed Acunetix vulnerability scanner to perform reconnaissance activities against the Joomla website hosted on 192.168.250.70.
 
 
+<br><br>
+## Step 2 - Weaponization
+
 
 
 
